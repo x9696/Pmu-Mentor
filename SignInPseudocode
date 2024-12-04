@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class SignInApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String storedEmail = "user@example.com";
+        String storedPassword = "password123";
+
+        System.out.println("Welcome to PMUMentor!");
+        System.out.print("Enter your email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Enter your password: ");
+        String password = scanner.nextLine();
+
+        if (email.equals(storedEmail) && password.equals(storedPassword)) {
+            System.out.println("Login successful! Welcome to PMUMentor.");
+        } else {
+            System.out.println("Invalid email or password. Please try again.");
+        }
+
+        scanner.close();
+    }
+}
